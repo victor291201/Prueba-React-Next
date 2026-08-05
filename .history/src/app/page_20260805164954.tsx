@@ -36,7 +36,7 @@ export default function Home() {
       </main>
 
       <footer className="mx-auto w-full max-w-6xl px-4 pb-8 text-center text-sm text-slate-400 sm:px-6 lg:px-8 dark:text-neutral-500">
-        Victor Cervantes · Prueba tecnica
+        KIBBO · Inventario de productos
       </footer>
     </div>
   );
