@@ -69,11 +69,12 @@ Abrir [http://localhost:3000](http://localhost:3000) en el navegador.
 
 | # | Extra | Cumplido | Cómo se implementó |
 |---|---|---|---|
-| 7a | **Tests unitarios / integración** con Jest + Testing Library | ✔ | 73 tests en 11 archivos: store, hooks, validators, formatters, y componentes (form, list, filters, dialog, theme) |
-| 7b | **Librería de diseño** (TailwindCSS, MUI, etc.) | ✔ | **TailwindCSS** 3.4 con `dark:` variants, `clsx` + `tailwind-merge` para resolución de conflictos de clases |
-| 7c | **Aplicación responsiva** (móvil/desktop) | ✔ | Mobile-first con breakpoints `sm:`, `lg:`, `xl:`. En desktop: layout de 2 columnas (formulario + lista). En mobile: columna única |
-| 7d | **Lazy loading / dynamic imports** | ✔ | `ProductList` y `ProductFilters` cargados con `next/dynamic`. Skeleton de carga mientras se cargan |
-| 7e | **Accesibilidad básica** (aria, focus visible) | ✔ | Skip link, `aria-required`, `aria-invalid` + `aria-describedby` + `role="alert"`, `aria-live`, `aria-label` en botones, `role="alertdialog"` + `aria-modal` + focus trap en modal de confirmación, `tabIndex` + teclado en tarjetas, `focus:ring` en todos los interactivos |
+| 7a | **Despliegue en Vercel** | ✔ | [prueba-react-next.vercel.app](https://prueba-react-next.vercel.app) — deploy automático desde GitHub |
+| 7b | **Tests unitarios / integración** con Jest + Testing Library | ✔ | 73 tests en 11 archivos: store, hooks, validators, formatters, y componentes (form, list, filters, dialog, theme) |
+| 7c | **Librería de diseño** (TailwindCSS, MUI, etc.) | ✔ | **TailwindCSS** 3.4 con `dark:` variants, `clsx` + `tailwind-merge` para resolución de conflictos de clases |
+| 7d | **Aplicación responsiva** (móvil/desktop) | ✔ | Mobile-first con breakpoints `sm:`, `lg:`, `xl:`. En desktop: layout de 2 columnas (formulario + lista). En mobile: columna única |
+| 7e | **Lazy loading / dynamic imports** | ✔ | `ProductList` y `ProductFilters` cargados con `next/dynamic`. Skeleton de carga mientras se cargan |
+| 7f | **Accesibilidad básica** (aria, focus visible) | ✔ | Skip link, `aria-required`, `aria-invalid` + `aria-describedby` + `role="alert"`, `aria-live`, `aria-label` en botones, `role="alertdialog"` + `aria-modal` + focus trap en modal de confirmación, `tabIndex` + teclado en tarjetas, `focus:ring` en todos los interactivos |
 
 ### Extras adicionales (añadidos por iniciativa propia)
 
