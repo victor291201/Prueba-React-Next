@@ -4,6 +4,7 @@
 
 Aplicación de una sola página para gestionar un inventario de productos. Permite crear, editar, eliminar, ordenar y filtrar productos. Los datos persisten en `localStorage` sin necesidad de backend.
 
+🔗 **Repositorio:** [github.com/victor291201/Prueba-React-Next](https://github.com/victor291201/Prueba-React-Next)
 🌐 **Demo en vivo:** [https://prueba-react-next.vercel.app](https://prueba-react-next.vercel.app)
 
 <a name="instalacion"></a>
@@ -18,8 +19,8 @@ Aplicación de una sola página para gestionar un inventario de productos. Permi
 
 ```bash
 # 1. Clonar el repositorio
-git clone <url-del-repo>
-cd kibbo-front
+git clone https://github.com/victor291201/Prueba-React-Next.git
+cd Prueba-React-Next
 
 # 2. Instalar dependencias
 npm install
@@ -226,7 +227,7 @@ Probado en **Node 20** y **Node 22**.
 
 Para replicar el despliegue:
 
-1. Sube el repositorio a GitHub.
+1. Sube el repositorio a GitHub ([github.com/victor291201/Prueba-React-Next](https://github.com/victor291201/Prueba-React-Next)).
 2. Ve a [vercel.com/new](https://vercel.com/new) e importa el repositorio.
 3. Vercel detecta automáticamente Next.js. No requiere variables de entorno.
 4. Haz clic en **Deploy**.
