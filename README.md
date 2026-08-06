@@ -4,6 +4,8 @@
 
 Aplicación de una sola página para gestionar un inventario de productos. Permite crear, editar, eliminar, ordenar y filtrar productos. Los datos persisten en `localStorage` sin necesidad de backend.
 
+🌐 **Demo en vivo:** [https://prueba-react-next.vercel.app](https://prueba-react-next.vercel.app)
+
 <a name="instalacion"></a>
 ## Instalación y ejecución
 
@@ -219,6 +221,10 @@ El workflow `.github/workflows/ci.yml` se ejecuta automáticamente en cada push/
 Probado en **Node 20** y **Node 22**.
 
 ### Despliegue en Vercel
+
+**En vivo:** [https://prueba-react-next.vercel.app](https://prueba-react-next.vercel.app)
+
+Para replicar el despliegue:
 
 1. Sube el repositorio a GitHub.
 2. Ve a [vercel.com/new](https://vercel.com/new) e importa el repositorio.
