@@ -133,7 +133,7 @@ kibbo-front/
 ├── README.md
 ├── tailwind.config.ts          # darkMode: "class"
 ├── tsconfig.json
-├── jest.config.ts
+├── jest.config.js
 ├── jest.setup.ts               # ResizeObserver/rAF polyfills for framer-motion
 ├── next.config.mjs
 └── package.json
