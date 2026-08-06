@@ -118,7 +118,7 @@ export function ProductForm() {
           ? "Formulario de edición de producto"
           : "Formulario de nuevo producto"
       }
-      className="flex flex-col gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition-colors lg:sticky lg:top-6 dark:border-neutral-800 dark:bg-neutral-900"
+      className="flex flex-col gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition-colors lg:sticky lg:top-6 lg:h-fit dark:border-neutral-800 dark:bg-neutral-900"
     >
       <div>
         <h2 className="text-lg font-semibold text-slate-900 dark:text-neutral-100">
