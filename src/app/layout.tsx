@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Providers } from "./providers";
 import { ToastContainer } from "@/components/ui/ToastContainer";
-import { cn } from "@/lib/utils";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -30,13 +29,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} antialiased`}>
         <a
           href="#main-content"
-          className={cn(
-            "sr-only",
-            "focus:not-sr-only",
-            "focus:fixed focus:left-4 focus:top-4 focus:z-[200]",
-            "focus:rounded-md focus:bg-indigo-600 focus:px-4 focus:py-2 focus:text-white",
-            "focus:outline-none focus:ring-2 focus:ring-indigo-300"
-          )}
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:rounded-md focus:bg-indigo-600 focus:px-4 focus:py-2 focus:text-white focus:outline-none focus:ring-2 focus:ring-indigo-300"
         >
           Saltar al contenido principal
         </a>

@@ -71,7 +71,7 @@ Abrir [http://localhost:3000](http://localhost:3000) en el navegador.
 |---|---|---|---|
 | 7a | **Despliegue en Vercel** | ✔ | [prueba-react-next.vercel.app](https://prueba-react-next.vercel.app) — deploy automático desde GitHub |
 | 7b | **Tests unitarios / integración** con Jest + Testing Library | ✔ | 73 tests en 11 archivos: store, hooks, validators, formatters, y componentes (form, list, filters, dialog, theme) |
-| 7c | **Librería de diseño** (TailwindCSS, MUI, etc.) | ✔ | **TailwindCSS** 3.4 con `dark:` variants, `clsx` + `tailwind-merge` para resolución de conflictos de clases |
+| 7c | **Librería de diseño** (TailwindCSS, MUI, etc.) | ✔ | **TailwindCSS** 3.4 con `dark:` variants |
 | 7d | **Aplicación responsiva** (móvil/desktop) | ✔ | Mobile-first con breakpoints `sm:`, `lg:`, `xl:`. En desktop: layout de 2 columnas (formulario + lista). En mobile: columna única |
 | 7e | **Lazy loading / dynamic imports** | ✔ | `ProductList` y `ProductFilters` cargados con `next/dynamic`. Skeleton de carga mientras se cargan |
 | 7f | **Accesibilidad básica** (aria, focus visible) | ✔ | Skip link, `aria-required`, `aria-invalid` + `aria-describedby` + `role="alert"`, `aria-live`, `aria-label` en botones, `role="alertdialog"` + `aria-modal` + focus trap en modal de confirmación, `tabIndex` + teclado en tarjetas, `focus:ring` en todos los interactivos |
@@ -88,7 +88,6 @@ Abrir [http://localhost:3000](http://localhost:3000) en el navegador.
 | +6 | **Detección de duplicados** | Si se crea un producto con un nombre ya existente, se suman las cantidades en vez de duplicar. Si se edita y el nombre colisiona con otro, se rechaza con error |
 | +7 | **CI con GitHub Actions** | `.github/workflows/ci.yml`: lint + typecheck + tests con cobertura en Node 20 y 22 en cada push/PR |
 | +8 | **Branding con logo** | Logo en el favicon (`public/logo.png` + `app/icon.png`) y en el header |
-| +9 | **Helper `cn()`** | `clsx` + `tailwind-merge` en `src/lib/utils.ts` para composición de clases sin conflictos |
 
 ---
 
@@ -153,14 +152,11 @@ Abrir [http://localhost:3000](http://localhost:3000) en el navegador.
 | **TailwindCSS** | 3.4 | Estilos utility-first responsivos |
 | **next-themes** | 0.4 | Tema oscuro SSR-safe |
 | **Framer Motion** | 13 | Animaciones declarativas |
-| **clsx** + **tailwind-merge** | 2 + 3 | Composición segura de clases CSS |
 | **Jest** + **Testing Library** | 30 + 16 | Tests unitarios e integración |
 
 ### Decisiones técnicas
 
 - **Zustand sobre Context/Redux:** El middleware `persist` de Zustand permite persistir en localStorage con 2 líneas de configuración. Requiere cero providers. Los selectores granulares evitan re-renders innecesarios.
-
-- **`cn()` helper (`clsx` + `tailwind-merge`):** Compone clases condicionales y resuelve conflictos (ej: `p-2` + `p-4` → gana `p-4`). Evita strings monolíticos de 200+ caracteres inlegibles.
 
 - **`editingProduct` no se persiste:** Al recargar la página, el formulario siempre vuelve a modo creación limpio.
 
@@ -182,7 +178,6 @@ src/
 │   └── ui/                 # Button, Input, Select, TextArea,
 │                             ConfirmDialog, ToastContainer, ThemeToggle, icons
 ├── hooks/                  # useProducts, useDebounce, useToast
-├── lib/                    # utils (cn helper)
 ├── store/                  # productStore (persistido), toastStore (efímero)
 ├── types/                  # product.ts
 ├── utils/                  # validators, formatters
